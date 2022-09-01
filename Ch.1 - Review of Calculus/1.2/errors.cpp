@@ -20,12 +20,12 @@
 
 double absoluteError(double p, double approx)
 {
-	return (abs(p - approx));
+	return (fabs(p - approx));
 }
 
 double relativeError(double p, double approx)
 {
-	return (absoluteError(p, approx) / abs(p));
+	return (absoluteError(p, approx) / fabs(p));
 }
 
 int main()
