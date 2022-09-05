@@ -23,7 +23,7 @@ def bisection(a, b, t, n):
         fp = f(p)
         if (fp == 0) or ((b-a)/2 < t):    # if exact root found or error tolerance is reached
             counter += 1
-            print(f"{counter:>02}\t{a:<16}\t{b:<11}\t\t{p:<16}\t\t{f(p):<16}\t\t{b-a:<16}")
+            print(f"{counter:>02}\t{a:<16}\t{b:<11}\t\t{p:<16}\t\t{f(p):<16}\t\t{b-p:<16}")
             break
         elif (fa * fp > 0):    # same signs, shift right
             a = p
@@ -32,7 +32,7 @@ def bisection(a, b, t, n):
             b = p
         counter += 1
         print(f"{counter:>02}\t{a:<16}\t{b:<11}\t\t{p:<16}\t\t{f(p):<16}\t\t{b-a:<16}")
-    print(f"\nAfter {counter} iterations, the approximation for the root in [{l},{u}] is ~{p}\nwith error {b-a}")
+    print(f"\nAfter {counter} iterations, the approximation for the root in [{l},{u}] is ~{p}\nwith error {b-p}")
     
 
 if __name__ == '__main__':
