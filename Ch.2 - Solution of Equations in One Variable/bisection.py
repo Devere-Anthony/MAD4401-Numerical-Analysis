@@ -34,7 +34,6 @@ def bisection(a, b, t, n):
         print(f"{counter:>02}\t{a:<16}\t{b:<11}\t\t{p:<16}\t\t{f(p):<16}\t\t{b-a:<16}")
     print(f"\nAfter {counter} iterations, the approximation for the root in [{l},{u}] is ~{p}\nwith error {b-p}")
     
-
 if __name__ == '__main__':
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
